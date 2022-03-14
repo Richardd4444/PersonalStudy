@@ -91,6 +91,7 @@ Temporary Items
 # Submodules:
 */.idea
 */.bsp
+*/project
 
 # Mongo Explorer plugin:
 .idea/mongoSettings.xml
@@ -255,10 +256,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
-### SBUX
-data/
-logs/
-projectFilesBackup/
-*snapshots/
-*journal/
