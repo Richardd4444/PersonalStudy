@@ -91,7 +91,7 @@ Temporary Items
 # Submodules:
 */.idea
 */.bsp
-*/project
+*/project/
 
 # Mongo Explorer plugin:
 .idea/mongoSettings.xml
