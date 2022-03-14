@@ -90,6 +90,7 @@ Temporary Items
 
 # Submodules:
 */.idea
+*/.bsp
 
 # Mongo Explorer plugin:
 .idea/mongoSettings.xml
@@ -153,6 +154,7 @@ local.properties
 
 # sbteclipse plugin
 .target
+*/target
 
 # Tern plugin
 .tern-project
