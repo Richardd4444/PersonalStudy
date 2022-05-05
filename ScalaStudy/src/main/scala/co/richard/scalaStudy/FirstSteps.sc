@@ -21,6 +21,8 @@ object FirstSteps {
 
   "hello".toUpperCase.toLowerCase
 
+  "the quick brown fox" split " "
 
+  "the quick brown fox".split(" ")
 
 }
