@@ -65,3 +65,88 @@ object Quentin{
   val food:String = "Curry"
 }
 
+/*
+Square Dance!
+Define an object called calc with a method square that accepts a Double
+as an argument and… you guessed it… squares its input. Add a method called
+cube that cubes its input calling square as part of its result calculation.
+*/
+
+object calc{
+  def square(n:Double):Double = {
+    n*n
+  }
+  def cube(n:Double):Double = {
+    square(n)*n
+  }
+}
+
+/*
+Precise Square Dance!
+Copy and paste calc from the previous exercise to create a calc2 that is
+generalized to work with Ints as well as Doubles. If you have Java experience,
+this should be fairly straightforward. If not, read the solution below.
+*/
+
+object calc2{
+  def square(n:Double):Double = {
+    n*n
+  }
+  def cube(n:Double):Double = {
+    square(n)*n
+  }
+
+  def square(n:Int):Int = {
+    n*n
+  }
+  def cube(n:Int): Int = {
+    square(n) * n
+  }
+}
+
+/*
+Order of evaluation
+When entered on the console, what does the following program output, and
+what is the type and value of the final expression? Think carefully about the
+types, dependencies, and evaluation behaviour of each field and method.
+*/
+object argh {
+  def a = {
+    println("a")
+    1
+  }
+  val b = {
+    println("b")
+    a + 2
+  }
+  def c = {
+    println("c")
+    a
+    b + "c"
+  }
+}
+
+argh.c + argh.b + argh.a
+
+/*
+Greetings, human
+Define an object called person that contains fields called firstName and
+lastName. Define a second object called alien containing a method called
+greet that takes your person as a parameter and returns a greeting using their
+firstName.
+What is the type of the greet method? Can we use this method to greet other
+objects?
+*/
+
+object person{
+  val firstName:String = "Richard"
+  val lastName:String = "Mendoza"
+}
+
+object alien{
+  def greet(p:person.type) = {
+    "Greetings, " + p.firstName + " " + p.lastName
+  }
+}
+
+alien.greet(person)
