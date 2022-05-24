@@ -139,14 +139,35 @@ objects?
 */
 
 object person{
-  val firstName:String = "Richard"
-  val lastName:String = "Mendoza"
+  val firstName: String = "Richard"
+  val lastName: String = "Mendoza"
 }
 
 object alien{
-  def greet(p:person.type) = {
+  def greet(p: person.type): String = {
     "Greetings, " + p.firstName + " " + p.lastName
   }
 }
 
 alien.greet(person)
+
+// Test Cases
+
+assert(calc2.square(2.0) == 4.0)
+assert(calc2.square(3.0) == 9.0)
+assert(calc2.square(-2.0) == 4.0)
+
+// Declaration
+
+def square(in: Double): Double = in * in
+
+/* We can use ??? when we don't know the body of the method and
+continue with the code */
+
+// Compound expressions
+
+{
+  println("This is a side-effect")
+  println("This is a side-effect as well")
+  3
+}
