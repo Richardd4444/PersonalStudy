@@ -1,0 +1,49 @@
+- Classes help organize our code; they contain attributes (also referred to as properties) 
+  and behavior (also referred to as methods) 
+
+- Every class contains a constructor that can create instances
+
+- Some attributes are associated with each individual instance and we call these instance
+  variables
+
+- Non-static instance methods access the instance variables in their implementation
+
+- Some attributes ate associated with the whole class and we call these class variables
+
+- Static class methods do not need an instance in order to be used; we just use the 
+  class name
+
+--------------------------------------------------------------------------------------------
+
+- Simple, object-oriented, and familiar
+
+- Robust and secure
+
+- Architecture neutral and portable
+
+- High performance
+
+- Interpreted, threaded, and dynamic
+
+- Java is an interpreted lenguage
+
+- Compiles to bytecode instead of machine lenguage
+
+- Applications are portable between platforms without recompiling
+
+--------------------------------------------------------------------------------------------
+
+Concurrent & parallel
+
+- Paralell programming requires parallel hardware (multiple processors)
+
+- Thread: Independent path of execution, subset of a process, Operating System schedules threads for execution
+
+
+CONCURRENCY
+
+  Ability of a program to be broken into parts that can run independently of each other
+  without afecting the result (Order independent)
+
+  - Program Structure
+  - Dealing with multiple things at once
