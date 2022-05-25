@@ -65,6 +65,7 @@ Temporary Items
 *.xz
 *.lzma
 *.cab
+*.txt
 
 #packing-only formats
 *.iso
