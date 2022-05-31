@@ -65,6 +65,7 @@ Temporary Items
 *.xz
 *.lzma
 *.cab
+*.txt
 
 #packing-only formats
 *.iso
@@ -256,5 +257,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
-JavaStudy/DomainDrivenDesign.txt

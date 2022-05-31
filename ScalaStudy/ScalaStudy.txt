@@ -1,0 +1,71 @@
+Primitive Data Types
+	
+	Int, Double, Float, Long, Short, Byte, Boolean, Char.
+
+Unit => void (The UNIT data type is a data that doesn't return Nothing, that's why is equals to void in Java)
+
+--------------------------------------------------------------------------------------------
+
+Object Literal
+
+When we create a new Object, we use the keyword (declaration) "object" before the name of 
+our object:
+	
+			object Test{}
+
+This is not a expression, it binds a name (Test) with a value (an empty object).
+
+At the moment to evaluate the object, it returns a new data type, this is called a singleton type. We cannot create other values of this type.
+
+			Test
+			// res0: Test.type = Test$@779732fb
+
+--------------------------------------------------------------------------------------------
+
+Methods VS fields
+
+object Test7 {
+	val simpleField = {
+		println("Evaluating simpleField")
+		42
+	}
+	def noParameterMethod = {
+		println("Evaluating noParameterMethod")
+		42
+	}
+}
+
+A "Val" takes the value last line of the code block, while a method evaluate whole the code
+block
+
+Objects - methods - fields(val & var) -> All of there are declarations
+
+Declaratons are different to expressions. They do not evaluate to a value and do not have a 
+type.
+
+--------------------------------------------------------------------------------------------
+
+Process for Writing Methods
+
+1. Identify the type of the inputs and outputs of the method.
+2. Write some test cases for the expected output of the method given example input. We can 
+use the assert function to write down these cases.
+3. Write the method declaration using ??? for the body.
+4. Run the code to check the test cases do in fact fail.
+5. Write the body of the method. We currently have two techniques to apply there:
+	• consider the result type and how we can create an instance of it.
+	• consider the input type and methods we can call to transform it
+	to the result type.
+6. Run the code again and check the test cases pass
+
+--------------------------------------------------------------------------------------------
+
+Compound expressions
+
+A block is a sequence of expressions or declarations surrounded by braces '{}'. A block is 
+also an expression: it executes each of its sub-expressions in order and returns the last 
+value of the expression.
+
+One reason to use a block is to use code that produces side-effects before calculating a 
+final value.
+
