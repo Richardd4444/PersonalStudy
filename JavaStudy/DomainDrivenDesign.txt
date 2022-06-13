@@ -1,0 +1,60 @@
+# Domain Driven Design 
+## Capas del DDD
+
+[![Layers-DDD.png](https://i.postimg.cc/j29CMcbx/Layers-DDD.png)](https://postimg.cc/fScwLxyp)
+
+--------------------------------------------------------------------------------------------
+
+Capa externa: INFRAESTRUCTURA		| Se accede mediante:
+									|
+- Controladores						| - HTTP
+- Entity Manager					| - SQL
+- Mail Adapter						| - SMTP
+- Rest Client						| - Rest API
+- RabbitMQ Adapter					| - Message broker
+
+--------------------------------------------------------------------------------------------
+
+Capa intermedia: Aplicación 
+
+- Casos de uso
+
+--------------------------------------------------------------------------------------------
+
+Nucleo: Dominio
+
+- Entidades
+- Eventos
+- Repositorios
+- Servicios
+
+--------------------------------------------------------------------------------------------
+
+## Distribución del DDD
+ _______________________________________________________________
+|								|								|
+|	DDD: Tactial Design			|	DDD: Strategic Design		|
+|								|								|
+|	- Domain Events				|	- Ubiquitous Language		|
+|	- Model-Driven Design		|	- Big Ball of Mud			|
+|	- Repositories 				|	- Anticorruption Layer 		|
+|	- Aggregates				|	- Bounded Context			|
+|	- Factories 				|	- Context Map				|
+|	- Value Objects				|	- Separate Ways				|
+|	- Layered Architecture		|	- Customer/Supplier Teams	|
+|	- Services					|	- Continuous Integration	|
+|	- Entities					|	- Shared Kernel				|
+|								|	- Conformist				|
+|								|	- Open Host Service 		|
+|								|	- Published language	  	|
+|_______________________________|_______________________________|
+
+Model-Driven Design: No hace referencia a los modelos previos, sino a mapear el concepto
+a nuestra aplicación (Como modelarlo), dirigir el diseño en base a modelos ya existentes
+
+	|Model-Driven Design| --> Expressed with --> |Services| : Casos de uso, casos de dominio
+											 --> |Entities| : Usuarios (Tienen identificador)
+											 --> |ValueObj| : Clases (Viene identificado por el valor que contiene)
+
+							|Entities| - Integrity maintained by ->|Aggregates| : Es conceptual
+							|ValueObj| - Encapsulated with ------| 		|- Accessed using -> |Repositories|

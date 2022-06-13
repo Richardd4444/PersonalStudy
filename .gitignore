@@ -65,6 +65,7 @@ Temporary Items
 *.xz
 *.lzma
 *.cab
+*.txt
 
 #packing-only formats
 *.iso
@@ -256,4 +257,3 @@ typings/
 
 # dotenv environment variables file
 .env
-/ScalaStudy/ScalaStudy.txt
