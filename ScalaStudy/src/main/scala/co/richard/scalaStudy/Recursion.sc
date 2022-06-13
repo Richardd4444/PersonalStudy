@@ -75,3 +75,48 @@ def expoNat(x:Double):Double = {
 }
 
 expoNat(1)
+
+def potencia2(a:Double, n:Int):Double = n match {
+  case 1 => a
+  case n if (n%2 == 0) => {
+    val an2 = potencia2(a, n/2)
+    an2 * an2
+  }
+  case n => a * potencia2(a, n-1)
+}
+
+potencia2(2.2,3)
+
+/** Posicion de cola
+ * Cuando todos los puntos de retorno de una funcion son llamadas de cola
+ * o el retorno de un valor literal se dice qur esta fimcopm tienne posicion
+ * de cola
+ */
+
+def potenciaC(a:Double,n:Int):Double = {
+  def iPotencia(a:Double, n:Int, r:Double):Double = n match {
+    case 0 => r
+    case n => iPotencia(a,n-1, r * a)
+  }
+  iPotencia(a,n,1.0)
+}
+
+potenciaC(2,3)
+
+def fibRecCola(n:Int):Int = {
+  def iFib(n:Int, t:(Int,Int)):Int = n match {
+    case 0 => t._1
+    case 1 => t._2
+    case n => iFib(n-1,(t._2,t._1 + t._2))
+  }
+  iFib(n,(0,1))
+}
+
+// Valores como funciones
+
+val suma = (a:Int,b:Int) => a+b
+
+suma(1,2)
+
+// Funciones anonimas
+
